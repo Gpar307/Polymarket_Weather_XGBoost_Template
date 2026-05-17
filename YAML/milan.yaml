@@ -1,0 +1,44 @@
+# Milan config — consumed by all four template scripts.
+# Run any script with:  python <script>.py --config milan.yaml
+
+city:
+  name: Milan
+  # Short tag appended to default output filenames.
+  output_suffix: milan
+  # Lowercase city slug used in Polymarket market URLs:
+  #   https://polymarket.com/event/highest-temperature-in-<slug>-on-<date>-<temp>c
+  polymarket_slug: milan
+
+location:
+  timezone: Europe/Rome
+  # LIMC = Milan-Malpensa
+  latitude:  45.63060
+  longitude: 8.72811     # signed; positive = east. GFS 0–360 conversion is handled in code.
+
+iem:
+  station: LIMC
+
+# Forecast hours (UTC) of the 00Z model run — afternoon heating window.
+# Milan is UTC+1/+2, so 12/15/18 UTC ≈ 13:00–20:00 local. Adjust if you ever
+# move to a different latitude/timezone.
+forecast_hours:
+  gfs_surface:   [12, 15, 18]   # surface 2 m temp (today + past-3-day bias)
+  gfs_850hpa:    [12, 15]       # 850 hPa temp for lapse-rate feature
+  ecmwf_surface: [12, 15, 18]
+
+model:
+  # Path to the trained XGBoost JSON. Set to null to skip inference.
+  file: milan_MAE_081_oracle.json
+  # Mean absolute error in °C — drives the probability board and backtest sizing.
+  mae: 0.81
+
+# Local "afternoon" window over which the daily high is measured.
+# MUST match the training target AND Polymarket's settlement window,
+# otherwise actual-max calculations and the backtester drift apart.
+target_window:
+  start: "12:00"
+  end:   "20:00"
+
+# Plausible integer-°C bracket range. Milan typically falls in ~-5 to 40,
+# but the wider range catches edge cases.
+temp_range: [0, 46]    # min inclusive, max exclusive — i.e. covers 0…45 °C
