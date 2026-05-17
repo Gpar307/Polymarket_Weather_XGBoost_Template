@@ -11,6 +11,6 @@ Stracture:
   * The mass_scaper.py and mass_scraper_claude_version.py scripts perform the same function. The weather station is hardcoded and should be adjusted for every new station
 
 * YAML files:
-  *Contains the configuration yaml files with the city-specific values
+  * Contains the configuration yaml files with the city-specific values
   Are meant to be used in combination with the *template.py files
 
