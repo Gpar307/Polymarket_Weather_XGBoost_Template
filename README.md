@@ -29,15 +29,19 @@ The current scripts are focused on daily **highest temperature in `<city>`** mar
 ```text
 .
 ├── README.md
-├── milan.yaml
-├── XGBOOST_template.ipynb
-├── Model_run_template.py
-├── run_model_historical_template.py
-├── backtesting_data_extraction_template.py
-├── backtest_template.py
-├── Wundergrounds_scraper.py
-├── mass_scraper.py
-└── mass_scraper_claude_version.py
+├── .gitignore
+├── Templates/
+│   ├── backtest_template.py
+│   ├── backtesting_data_extraction_template.py
+│   ├── Model_run_template.py
+│   ├── run_model_historical_template.py
+│   ├── Wundergrounds_scraper.py
+│   ├── mass_scraper.py
+│   ├── mass_scraper_claude_version.py
+│   └── XGBOOST_template.ipynb
+│
+└── YAML/
+    └── milan.yaml
 ```
 
 ### Main files
