@@ -1,10 +1,6 @@
 ###This projects includes a demostration of a temprature prediction market backtesting bot for the [Polymarket prediction market website ](https://polymarket.com/)###
 
 Stracture:
-* Milan file:
-  * Contains the data required for the generation of the temprature prediction xgboost model.
-  * Contains the ipynb data engeeniring and model generation notebook
-  * Contains the backtesting results for the city of Milan for a specifi time range
 
 * Templates file:
   * Contains the scripts required for the backtesting. All files with the template indication on their name are meant to be used in combination with a yaml confiquration file for the desired city
