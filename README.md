@@ -347,26 +347,9 @@ You should treat these as experimental parameters, not universal settings. Modif
 |`backtest\_daily\_<city>.csv`|`backtest\_template.py`|Daily aggregated PnL.|
 |`backtest\_summary\_<city>.txt`|`backtest\_template.py`|Human-readable backtest summary.|
 
-\---
 
-Suggested structure:
 
-```text
-.
-├── README.md
-├── configs/
-│   └── milan.yaml
-├── notebooks/
-│   └── XGBOOST\_template.ipynb
-├── scripts/
-│   ├── Model\_run\_template.py
-│   ├── run\_model\_historical\_template.py
-│   ├── backtesting\_data\_extraction\_template.py
-│   ├── backtest\_template.py
-│   ├── Wundergrounds\_scraper.py
-│   └── oracle\_scraper\_resumable.py
-└── requirements.txt
-```
+
 
 \---
 
