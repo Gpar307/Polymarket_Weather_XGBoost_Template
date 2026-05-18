@@ -251,7 +251,6 @@ Output file	Created by	Description
 `backtest_summary_<city>.txt`	`backtest_template.py`	Human-readable backtest summary.
 ---
 
----
 Limitations
 This project is experimental. Important limitations include:
 Backtest results may be unstable with small sample sizes.
@@ -265,5 +264,3 @@ This repository is for educational and research purposes only. It is not financi
 
 AI STATEMENT
 This project was developed with assistance from AI tools, including Claude Opus 4.7 and ChatGPT 5.5, for feature engineering, code generation, debugging, and documentation support. All outputs were reviewed, tested, and validated by the author.
-
-
