@@ -250,7 +250,24 @@ Output file	Created by	Description
 `backtest_daily_<city>.csv`	`backtest_template.py`	Daily aggregated PnL.
 `backtest_summary_<city>.txt`	`backtest_template.py`	Human-readable backtest summary.
 ---
-
+Suggested structure:
+```text
+.
+├── README.md
+├── configs/
+│   └── milan.yaml
+├── notebooks/
+│   └── XGBOOST_template.ipynb
+├── scripts/
+│   ├── Model_run_template.py
+│   ├── run_model_historical_template.py
+│   ├── backtesting_data_extraction_template.py
+│   ├── backtest_template.py
+│   ├── Wundergrounds_scraper.py
+│   └── oracle_scraper_resumable.py
+└── requirements.txt
+```
+---
 Limitations
 This project is experimental. Important limitations include:
 Backtest results may be unstable with small sample sizes.
