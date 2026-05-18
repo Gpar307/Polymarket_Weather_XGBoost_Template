@@ -216,3 +216,50 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ==========================================================
+# Polymarket weather bot generated data
+# ==========================================================
+
+# Orderbook data
+*_temperature_orderbooks.csv
+
+# Historical model predictions
+historical_predictions_*.csv
+historical_predictions_failures_*.csv
+
+# Daily model outputs
+today_features_*.csv
+today_probabilities_*.csv
+
+# Backtest outputs
+backtest_trades_*.csv
+backtest_daily_*.csv
+backtest_summary_*.txt
+
+# Oracle / Wunderground scraped data
+*_FINAL_ORACLE_DATA.csv
+*_oracle_backup.csv
+
+# Local API keys / secrets
+.env
+*.env
+
+# Optional: local notebooks autosaves
+.ipynb_checkpoints/
+
+# Optional: IDE folders
+.idea/
+.vscode/
+
+# Model artifacts
+*.pkl
+*.joblib
+*.model
+*.ubj
+
+# If your trained XGBoost models are saved as JSON, ignore only model JSONs
+# instead of every JSON file.
+models/*.json
+*_model.json
+xgboost_model_*.json
